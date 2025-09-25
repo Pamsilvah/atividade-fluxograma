@@ -1,107 +1,60 @@
-# estrutura de dados 
-
-# variáveis  - listas  - tuplas  -  diocionários e conjuntos
-# variável cabe apenas 1 dado
-nome  = 'Bea'
-sobrenome  =  'Lima'
-# palavra = estrutura de dados -  guardar dados
+# sistema de mercado
 
 
-# lista  =  [] # lista vazia 
-# nomes  =  ['ana','fernando','felix'] # lista do tipo texto
-# numero = [1,2,3,6,6] # numeros inteiros]
-# boeleana = [True, False, False] # lista boleana
-# reais =  [5.0,3.6,8.1] # lista float
-# lista_mista = [5.2,'texto',True,50] # lista mista 
-
-# print(lista_mista[-4] * lista_mista[3]) 
+print('MERCADO Z')
+produtos = ['','1 arroz',' 2 feijão',' 3 macarrão',' 4 leite',' 5 chocolate']
+valores = [0,10.0, 15.0, 5.0, 8.50,11.25]
+carrinho = []
+meu_total = []
 
 
-
-lista_vendas  =  [4000,5000,6000,7000]
-lista_vendas[0] = 50000
-# métodos e funções oara manipular  
-lista_vendas  =  [4000,5000,6000,7000]
-
-# posso alterar manualmente ele e eleminar  o 
-
-# alteram a lista 
-lista_vendas[0] = 50000
-lista_vendas.insert(2,200)
-print(lista_vendas)
-
-# inserir dados na minha lista 
-
-lista_vendas.append(1000)
-print(lista_vendas)
-
-# extend pode inserir varios dados 
-lista_vendas.extend([10,20,30])
-print(lista_vendas)
-
-# += inseri vários dados de uma só vez 
-
-lista_vendas+=(20,30,30,0,50)
-print(lista_vendas)
+pedir = input('Deseja pedir?')
+pedido = pedir == 'sim'
+print('Resposta:',pedido)
 
 
-# --------------------------------------
-# deletar o dado
-
-# remove -  pop  -  del 
-
-lista_vendas.remove(7000)
-print(lista_vendas)
-
-lista_vendas.pop()
-print(lista_vendas)
-
-lista_vendas.pop(0)
-print(lista_vendas)
-
-del lista_vendas[1]
-
-print(lista_vendas)
+# escolhendo o produto
+print(produtos)
 
 
-# --------------------------
-
-# função de verificação:
-
-print(sum(lista_vendas))
-
-print(len(lista_vendas))
-
-print(max(lista_vendas))
-
-print(min(lista_vendas))
-
-l =[1,2,3,6]
-c =  l.copy()
-l.clear()
-print(l)
-
-# ----------
-
-print(dir(lista_vendas))
-
-# ORGANIZAR A LISTA
-lista_vendas.sort(reverse=True )
-
-print(lista_vendas)
+produto_1 = int(input('Digite o Id 1 2 3 4 do produto: '))
+produto_2 = int(input('Digite o Id 1 2 3 4 do produto: '))
+produto_3 = int(input('Digite o Id 1 2 3 4 do produto: '))
+produto_4 = int(input('Digite o Id 1 2 3 4 do produto: '))
 
 
-# COUNT 
+# add ao carrinho
+carrinho.append(produtos[produto_1])
+carrinho.append(produtos[produto_2])
+carrinho.append(produtos[produto_3])
+carrinho.append(produtos[produto_4])
 
-lista  =  [1,2,2,2,4,5,60]
+
+# valores dos produtos estão entrando na lista
+meu_total.append(valores[produto_1])
+meu_total.append(valores[produto_2])
+meu_total.append(valores[produto_3])
+meu_total.append(valores[produto_4])
 
 
-# identificar onde o valor esta posicionado
-print(lista.index(1))
+soma = sum(meu_total)
 
-# contar quantos tem de um determinado valor
-print(lista.count(4))
 
-# index 
+print('Seu carrinho', carrinho)
+print('Total R$', soma)
+
+
+print('Escolha a forma de pagamento')
+
+
+pagamentos  = ['id  0   PIX',' id 1  CC','id  2  CD']
+
+print(pagamentos)
+escolha = int(input('Escolha a forma: '))
+print('Sua froma de pagamento é:', pagamentos [escolha])
+print('Obrigada Volte sempre!')
+
+
+
 
 
